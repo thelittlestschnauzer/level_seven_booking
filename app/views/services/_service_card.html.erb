@@ -1,0 +1,11 @@
+<div class="col-md-4 service-col">
+  <%= link_to(service, class: 'service-card') do %>
+  
+      <h4><%= service.category %></h4>
+      <h5><%= service.name %></h5>
+      <p class="service-content"><%= service.description %></p>
+      <p class="service-content"><%= service.price %></p>
+      <p class="service-content"><%= service.duration %></p>
+    <% end %>
+  </div>
+</div>

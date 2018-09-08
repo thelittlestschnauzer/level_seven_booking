@@ -1,6 +1,6 @@
-<form>
+
   <div class="form-group">
-    <%= simple_form_for @service do |f| %>
+    <%= simple_form_for(@service) do |f| %>
       <%= f.error_notification %>
 
       <%= f.input :name, class: 'form-control' %>
@@ -14,4 +14,3 @@
 
     <% end %>
   </div>
-</form>

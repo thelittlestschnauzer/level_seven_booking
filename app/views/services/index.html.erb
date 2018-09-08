@@ -1,0 +1,18 @@
+<main class="container service-header">
+  <h2 class="text-center">Services</h2>
+
+  <div class="row">
+    <% @services.each do |service| %>
+    <div class="col-md-4">
+      <div class="service">
+        <div class="image_wrapper">
+          <p>image will go here</p>
+          <h5><%= service.name %></h5>
+          <p><%= service.description %></p>
+          <p>$<%= service.price %> + </p>
+        </div><!-- image-wrapper -->
+      </div><!-- service -->
+    </div><!-- col-md-3-->
+    <% end %>
+  </div><!-- row-->
+</main>
