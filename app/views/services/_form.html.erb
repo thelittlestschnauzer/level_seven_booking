@@ -1,16 +1,11 @@
 
   <div class="form-group">
     <%= simple_form_for(@service) do |f| %>
-      <%= f.error_notification %>
+      <%= f.input :category %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :price %></br>
 
-      <%= f.input :name, class: 'form-control' %>
-      <%= f.input :description, class: 'form-control-lg' %>
-      <%= f.input :category, class: 'form-control-lg' %>
-      <%= f.input :price, class: 'form-control' %>
-      <%= f.input :duration, class: 'form-control' %></br>
-      <div class="form-group">
-        <%= f.button :submit, class: 'btn-primary' %>
-      </div>
-
+      <%= f.button 'submit', class: 'form-control' %>
     <% end %>
   </div>

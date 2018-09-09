@@ -1,22 +1,37 @@
-<main class="container service-header">
-  <h2 class="text-center">Services</h2>
+<h3 class="text-center">Services</h3>
 
-  <div class="row">
-    <% @services.each do |service| %>
-    <div class="col-md-4">
-      <div class="service">
-        <div class="image_wrapper">
-          <p>image will go here</p>
-          <h5><%= link_to service.name, service %></h5>
-          <p><%= service.description %></p>
-          <p>$<%= service.price %> + </p>
-          <h6 class="text-center booking-link">BOOK NOW</h6>
-        </div><!-- image-wrapper -->
-      </div><!-- service -->
-    </div><!-- col-md-3-->
-    <% end %>
-  </div><!-- row-->
-  <div>
-    <p class="links"><%= link_to "add services", new_service_path %></p>
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top hero-image">
+    <div class="card-body">
+      <% @services.each do |service| %>
+      <h4 class="card-category"><%= service.category %></h4>
+      <h6 class="card-title"><%= service.title %></h6>
+      <p class="card-text"><%= service.description %></p>
+      <p class="card-text">Prices starting at $<%= service.price %>0+</p>
+      <p class="card-description">(Exact price quote given after completed consultation, & before service begins)</p>
+      <%= link_to "BOOK NOW", services_path, class: "book-now" %>
+      <% end %>
+    </div>
   </div>
-</main>
+
+  <div class="card">
+  <img class="card-img-top hero-image2">
+  <div class="card-body">
+  <h4 class="card-title">Card Title</h4>
+  <p class="card-text">Here is a shorter description of the card.</p>
+  </div>
+  <div class="card-footer">
+  <small class="text-muted">Here is a footer</small>
+  </div>
+  </div>
+  <div class="card">
+<img class="card-img-top hero-image3">
+<div class="card-body">
+<h4 class="card-title">Card Title</h4>
+<p class="card-text">Here is a shorter description of the card.</p>
+</div>
+<div class="card-footer">
+<small class="text-muted">Here is a footer</small>
+</div>
+</div>

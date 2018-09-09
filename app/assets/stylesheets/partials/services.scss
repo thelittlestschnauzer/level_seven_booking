@@ -4,6 +4,11 @@
   box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
 }
 
+h3 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
 .form-group, {
   width: 60%;
   margin: auto;
@@ -99,4 +104,44 @@ h1 {
       }
     }
   }
+}
+
+.card {
+  .card-text {
+    line-height: 0.2;
+  }
+  .book-now {
+    color: #333333;
+    &:hover {
+      text-decoration: none;
+      color: #dcd5d7;
+    }
+  }
+}
+
+.hero-image {
+  background-image: url("hair.jpg");
+  background-color: #333333;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image2 {
+  background-image: url("hair2.jpg");
+  background-color: #333333;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image3 {
+  background-image: url("hair3.jpg");
+  background-color: #333333;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
