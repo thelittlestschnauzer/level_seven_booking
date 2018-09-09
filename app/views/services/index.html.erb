@@ -7,12 +7,16 @@
       <div class="service">
         <div class="image_wrapper">
           <p>image will go here</p>
-          <h5><%= service.name %></h5>
+          <h5><%= link_to service.name, service %></h5>
           <p><%= service.description %></p>
           <p>$<%= service.price %> + </p>
+          <h6 class="text-center booking-link">BOOK NOW</h6>
         </div><!-- image-wrapper -->
       </div><!-- service -->
     </div><!-- col-md-3-->
     <% end %>
   </div><!-- row-->
+  <div>
+    <p class="links"><%= link_to "add services", new_service_path %></p>
+  </div>
 </main>

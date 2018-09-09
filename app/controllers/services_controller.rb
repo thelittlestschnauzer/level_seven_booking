@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  before_action :find_service, only: [:show, :edit, :update, :destroy]
 
   def new
     @service = Service.new
@@ -11,10 +12,34 @@ class ServicesController < ApplicationController
   end
 
   def index
-    @services = Service.all 
+    @services = Service.all.order("created_at DESC")
   end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @service.update(service_params)
+      redirect_to services_path(@service)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @service.destroy
+    redirect_to @service
+  end
+
+
   private
+
+  def find_service
+    @service = Service.find(params[:id])
+  end
 
   def service_params
     params.require(:service).permit(:name, :description, :category, :price, :duration)

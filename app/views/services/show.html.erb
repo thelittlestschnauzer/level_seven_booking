@@ -1,0 +1,15 @@
+<section class="main-container">
+  <div id="service_top" class="row">
+  </div>
+  <div class="col-md-8" id="service_info" style="float:right;">
+    <h2><%= @service.name %></h1></br>
+      <p class="description"><%= @service.description %></p></br>
+      <p class="description"><%= @service.price %></p></br>
+      <p class="description"><%= @service.duration %></p>
+
+      <p> <%= link_to "edit", service_path %> | <%= link_to "delete", method: :destroy, data: {confirm: "Are you sure?"} %> | Home</p>
+    </div>
+
+
+  </div>
+</section>
